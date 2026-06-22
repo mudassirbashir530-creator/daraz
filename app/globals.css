@@ -1,0 +1,202 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,450;1,500;1,600&display=swap');
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, Cambria, "Times New Roman", Times, serif;
+  --color-brand-editorial-bg: #F9F9F7;
+  --color-brand-editorial-text: #121212;
+  --color-brand-editorial-muted: #888880;
+  --color-brand-editorial-border: #E2E2DE;
+  --color-brand-editorial-accent: #1A1A1A;
+  --color-brand-editorial-light-border: #F0F0EE;
+  --color-brand-editorial-accent-gold: #C5A880;
+}
+
+body {
+  background-color: #F9F9F7;
+  color: #121212;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* ==========================================================================
+   Editorial Theme Overrides
+   Mapping the dark utilities to a highly refined, premium editorial light theme
+   ========================================================================== */
+
+/* Backgrounds mapping to paper-whites and soft bone-greys */
+.bg-slate-950,
+.min-h-screen.bg-slate-950 {
+  background-color: #F9F9F7 !important;
+}
+
+/* Panel cards, headers, sections */
+.bg-slate-900,
+header.bg-slate-900,
+aside.bg-slate-900 {
+  background-color: #FFFFFF !important;
+}
+
+/* Inner elements and table stripes */
+.bg-slate-850,
+.bg-slate-950\/30,
+.bg-slate-950\/40,
+.bg-slate-950\/50 {
+  background-color: #Fdfdfd !important;
+}
+
+.hover\:bg-slate-850\/50:hover,
+.hover\:bg-slate-850\/30:hover {
+  background-color: #F4F4F1 !important;
+}
+
+/* Soft inline badges and secondary elements */
+.bg-slate-800 {
+  background-color: #E2E2DE !important;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F9F9F7;
+}
+::-webkit-scrollbar-thumb {
+  background: #D1D1CB;
+  border-radius: 3px;
+}
+
+/* Borders mapping to elegant thin sandstone/grey strokes */
+.border-slate-800,
+.border-slate-850,
+.border-slate-705,
+.border-slate-700,
+.border-t.border-slate-800,
+.border-r.border-slate-800,
+.border-b.border-slate-800 {
+  border-color: #E2E2DE !important;
+}
+
+/* Primary text headings overrides to charcoal ink */
+.text-slate-100,
+.text-slate-200,
+.text-slate-300,
+.text-white {
+  color: #1A1A1A !important;
+}
+
+/* Muted secondary and metadata text overrides */
+.text-slate-400,
+.text-slate-500 {
+  color: #888880 !important;
+}
+
+/* Brand Primary/Orange Overrides: Slate Dark Accent & Terracotta Rust */
+.bg-orange-600,
+.bg-orange-600\/100 {
+  background-color: #1A1A1A !important;
+  color: #FFFFFF !important;
+}
+.hover\:bg-orange-700:hover {
+  background-color: #4A4A45 !important;
+}
+
+/* Orange text gets mapped to terracotta-rust editorial accent */
+.text-orange-500,
+.text-orange-400 {
+  color: #C25E25 !important;
+}
+
+/* Amber/yellow alert badge mapping to premium soft sand/bronze style */
+.bg-amber-950\/20,
+.bg-amber-500\/10 {
+  background-color: #FFF9E6 !important;
+  border-color: #E6B800 !important;
+}
+.text-amber-400,
+.text-amber-200 {
+  color: #8A6D00 !important;
+}
+
+/* Red / Out of stock alerts mapped to a deep burgundy */
+.bg-red-950\/40 {
+  background-color: #FFF0F0 !important;
+  border-color: #FFC0C0 !important;
+  color: #A30000 !important;
+}
+.text-red-400,
+.text-red-300 {
+  color: #A30000 !important;
+}
+
+/* Green status indicators as rich forest green */
+.text-emerald-400,
+.text-emerald-500 {
+  color: #1B5E20 !important;
+}
+.bg-emerald-500 {
+  background-color: #2E7D32 !important;
+}
+
+/* Sidebar select styles */
+aside button {
+  border-radius: 4px !important;
+}
+aside button.bg-orange-600 {
+  background-color: #1A1A1A !important;
+  color: #FFFFFF !important;
+  font-weight: 500 !important;
+  border: 1px solid #1A1A1A !important;
+}
+aside button:not(.bg-orange-600):hover {
+  background-color: #F0F0EE !important;
+  color: #1A1A1A !important;
+}
+
+/* Buttons style tuning */
+button {
+  transition: all 0.2s ease;
+}
+
+/* Custom Serif Enhancements for Editorial rhythm */
+.editorial-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: -0.02em;
+}
+
+.editorial-number {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-weight: 600;
+}
+
+/* Specific inputs focus styles */
+input[type="text"],
+input[type="password"],
+input[type="number"],
+textarea,
+select {
+  background-color: #FFFFFF !important;
+  color: #1A1A1A !important;
+  border-color: #D1D1CB !important;
+}
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus {
+  border-color: #1A1A1A !important;
+  outline: none !important;
+}
+
+/* Labels */
+label {
+  color: #888880 !important;
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}

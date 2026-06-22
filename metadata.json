@@ -1,0 +1,6 @@
+{
+  "name": "SellerDesk",
+  "description": "Premium multi-store management console for Daraz sellers, featuring centralized dashboards, order fulfillment workflows, bulk price/stock updates, real-time analytics, and role-based access control.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
